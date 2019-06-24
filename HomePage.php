@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<head>
+<style type = "text/css">
+body{
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.fixed-header, .fixed-footer{
+  left: 0;
+  width: 100%;
+  background: #800000;
+  color: #ffffff;
+}
+.fixed-header{
+top: 0;
+position: fixed;
+padding: 10px;
+}
+.fixed-footer{
+bottom: 0;
+text-align: center;
+padding: 50px;
+}
+  .container{
+   width: 80%;
+   margin: 0 auto;
+  }
+  nav a{
+     color: #ffffff;
+     text-decoration: none;
+     padding: 7px 25px;
+     display: inline-block;
+  }
+  nav a:hover {
+      background-color: #FAAD07;
+  }
+.topacity{
+  opacity: 1;
+}
+
+.about{
+  text-align: center;
+  opacity: 0.5;
+}
+
+.info{
+  text-align: center;
+
+}
+
+.fa {
+padding: 20px;
+font-size: 30px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.4;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+ background: #55ACEE;
+ color: white;
+}
+.fa-pinterest {
+ background: #cb2027;
+ color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+ }
+.fa-flickr{
+  background: #00EBFF;
+  color: white;
+ }
+ .cancelbtn {
+    width: 100%;
+ }
+
+</style>
+  <title> Home </title>
+</head>
+
+<body>
+  <div class="fixed-header">
+    <div clas="container">
+      <nav>
+        <a href="HomePage.php">Home</a>
+        <a href="firstaid.html">First Aid</a>
+        <a href="redcross.html">Red Cross</a>
+        <a href="civildefense.html">Civil Defense</a>
+        <a href="home.html">Sign out</a>
+        <input style="margin-left: 40%;" type="text" placeholder="Search..." />
+      </nav>
+    </div>
+  </div>
+
+<div class="container">
+  <section>
+  <img class="mySlides" src="Images/mainhome.jpg" style="width:100%">
+  <img class="mySlides" src="Images/cross2.jpg" style="width:100%">
+  <img class="mySlides" src="Images/cd1.jpg" style="width:100%">
+</section>
+
+<script>
+var myIndex = 0;
+slideshow();
+
+function slideshow() {
+    var i;
+    var s = document.getElementsByClassName("mySlides");
+    for (i = 0; i < s.length; i++) {
+       s[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > s.length) {myIndex = 1}
+    s[myIndex-1].style.display = "block";
+    setTimeout(slideshow, 3000);
+}
+</script>
+
+<div class="about">
+  <h3> ABOUT US </h3>
+</div>
+<br>
+<br>
+
+<div class="info">
+  <h3><b><font color="800000"> The Problem at Hand </font></b></h3>
+  <h3><p><i>Recently the rate of accidents has increased drastically over the few years which is why there's a great
+    need to raise awareness to the issue at hand, that is not being prepared to act in the right way when distress strikes.</i></p></h3>
+
+    <h3><p><i>There's so many people that either don’t know how to act when an accident takes place, or they have a slight idea but
+     act upon it in a wrong way which may bring more harm than good in such situations.</i></p></h3>
+
+     <h3><p><i>Also, when distress strikes the first thing people think of is calling help and sadly nowadays only a numbered few know
+      the right numbers to call i.e. the red cross, civil defense etc. </i></p></h3>
+
+<h3><b><font color="800000"> Our Aim </font></b></h3>
+  <h3><p><i>We are all prone to accidents, and at one point of our lives we've all experienced the utter panic of not knowing what do,
+    or how to act when  having one of our close ones in an accident whether critical or not, or in distress in general.
+    So this website shall be your guide when you get stuck in a sticky situation, for it combines the most helpful emergency
+   organizations in one place, that is StayAlert.</h3></i></p>
+
+   <h3><b><font color="800000"> Access </font></b></h3>
+   <h3><p><i> For you to access our website you need to sign up for an account and then you will be welcomed with a variety
+     of ogranizations in which you can choose one, plus a stand-alone page that has everything you need to know about firstaid and emergencies.
+     When you choose an organization, you will be welcomed with a little bit of background information about it and you will be able to
+     access the lectures uploaded by the said organization.</i></p></h3>
+
+</div>
+
+<div class="fixed-footer">
+  <a href="http://facebook.com" class="fa fa-facebook"></a>
+  <a href="https://www.pinterest.com"  class="fa fa-pinterest"></a>
+  <a href="http://twitter.com/minimalmonkey" class="fa fa-twitter"></a>
+  <a href="https://www.flickr.com"  class="fa fa-flickr"></a>
+  <a href="https://lb.linkedin.com" class="fa fa-linkedin"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style type = "text/css">
+body{
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.fixed-header, .fixed-footer{
+  width: 100%;
+  background: #800000;
+  color: #ffffff;
+}
+.fixed-header{
+top: 0;
+position: fixed;
+padding: 10px;
+}
+.fixed-footer{
+bottom: 0;
+text-align: center;
+padding: 50px;
+}
+.container{
+ width: 80%;
+ margin: 0 auto;
+}
+nav a{
+   color: #ffffff;
+   text-decoration: none;
+   padding: 7px 25px;
+   display: inline-block;
+}
+nav a:hover {
+    background-color: #FAAD07;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #800000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+   padding: 10px 18px;
+    background-color: #800000;
+}
+.container {
+    padding: 16px;
+}
+
+.fa {
+padding: 20px;
+font-size: 30px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.4;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+ background: #55ACEE;
+ color: white;
+}
+.fa-pinterest {
+ background: #cb2027;
+ color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+ }
+.fa-flickr{
+  background: #00EBFF;
+  color: white;
+ }
+ .cancelbtn {
+    width: 100%;
+ }
+
+</style>
+<title> Sign up </title>
+<script type="text/javascript">
+
+  function check(s)
+  {
+    if(s.username.value == "") {
+      alert("Error: Username cannot be blank!");
+      s.username.focus();
+      return false;
+    }
+
+    var x = document.forms["myForm"]["email"].value;
+       var atpos = x.indexOf("@");
+       var dotpos = x.lastIndexOf(".");
+       if (atpos<1 || dotpos<1) {
+           alert("Not a valid e-mail address");
+           return false;
+       }
+
+    if(s.psw.value != "" && s.psw.value == s.ReTypePsw.value) {
+      if(s.psw.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        s.psw.focus();
+        return false;
+      }
+
+      re = /[0-9]/;
+      if(!re.test(s.psw.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        s.psw.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(s.psw.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        s.psw.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(s.psw.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        s.psw.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      s.psw.focus();
+      return false;
+    }
+
+    alert("Your registration is correct! ");
+    return true;
+  }
+
+</script>
+</head>
+
+<body>
+<div class="fixed-header">
+  <div clas="container">
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="Sign in.php">Sign in</a>
+      <a href="Sign up.html">Sign up</a>
+    </nav>
+  </div>
+</div>
+<h2><center> Sign up </center></h2>
+
+<form action="signup_proc.php" name="myForm" method="post" onsubmit="return check(this);">
+<div class="container">
+    <label><b>Username: </b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label><b>Password: </b></label>
+    <input class="t" type="password" placeholder="Enter Password" name="psw" required>
+
+    <label><b>Re-Type Password: </b></label>
+    <input class="t" type="password" placeholder="Re-TypePassword" name="ReTypePsw" required>
+
+    <label><b>Email: </b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <button type="submit">Sign up</button>
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="home.html"><button type="button" class="cancelbtn">Cancel</button></a>
+  </div>
+</form>
+
+<div class="fixed-footer">
+  <a href="http://facebook.com" class="fa fa-facebook"></a>
+  <a href="https://www.pinterest.com"  class="fa fa-pinterest"></a>
+  <a href="http://twitter.com/minimalmonkey" class="fa fa-twitter"></a>
+  <a href="https://www.flickr.com"  class="fa fa-flickr"></a>
+  <a href="https://lb.linkedin.com" class="fa fa-linkedin"></a>
+</div>
+</body>
+</html>
